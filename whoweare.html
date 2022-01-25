@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интеллектуальная игра Что? Где? Когда?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <div class="header-logo">
+          <a href="#" class="logo">
+            <img src="beeclever.svg" alt="BeeClever" />
+          </a>
+        </div>
+        <nav class="nav header-nav">
+          <a href="#" class="nav-item">Турниры</a>
+          <a href="#" class="nav-item nav-active">О нас</a>
+          <a href="#" class="nav-item">Как играть</a>
+        </nav>
+        <div class="header-extra">
+          <!--<a href="#" class="button button-light">Войти</a>-->
+          &nbsp;
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="whoweare-content content content-without-asides">
+          <div class="content-main">
+            <h1>Кто мы</h1>
+            <div class="whoweare-greeting">
+              <img
+                src="weare.png"
+                alt="BeeClever team"
+                class="whoweare-photo"
+              />
+              <p>
+                Bee Clever — это команда опытных авторов и организаторов.
+                Мы сами много лет играем во «Что? Где? Когда?» и другие игры,
+                пишем вопросы, редактируем и проводим турниры. Наша цель —
+                популяризация интеллектуального движения. Карантин открыл новые
+                возможности, и теперь мы проводим онлайн-игры для команд
+                со всего мира.
+              </p>
+              <p>Рады видеть вас на нашем сайте! Играйте с нами!</p>
+            </div>
+            <h2 class="howitworks-header">Как это работает</h2>
+            <div class="grid" style="--grid-min: 200px; --grid-gap: var(--g-l)">
+              <div class="grid-span">
+                <div class="howitworks-number">1</div>
+                <div class="howitworks-text">
+                  Каждая команда собирается онлайн в выбранном ими приложении
+                  для голосового или видеочата в единое для всех команд время
+                </div>
+              </div>
+              <div class="grid-span">
+                <div class="howitworks-number">2</div>
+                <div class="howitworks-text">
+                  Организаторы начинают Youtube-трансляцию. Ведущий задает
+                  вопрос, текст вопроса и иллюстрации к нему показываются в
+                  трансляции.
+                </div>
+              </div>
+              <div class="grid-span">
+                <div class="howitworks-number">3</div>
+                <div class="howitworks-text">
+                  После этого запускается таймер и поле для ввода ответов на
+                  устройствах капитанов команд. После объявляния правильного
+                  ответа система переключается на следующий вопрос.
+                </div>
+              </div>
+              <div class="grid-span">
+                <div class="howitworks-number">4</div>
+                <div class="howitworks-text">
+                  Ответы команд попадают на наш сайт и проверяются Игровым жюри
+                  в режиме реального времени.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-contcopy">
+          <div class="footer-contacts">
+            <div>+38 066 430 1279</div>
+            <div>+38 095 826 7155</div>
+            <div><a href="#">edditor@ukr.net</a></div>
+          </div>
+          <div class="footer-copyright">
+            &copy; Bee Сlever. Интеллектуальные игры
+          </div>
+        </div>
+        <div class="footer-social">
+          <div>Мы в в соцсетях</div>
+          <nav>
+            <a href="#" target="_blank"
+              ><img src="telegram.svg" alt="Bee Сlever Telegram"
+            /></a>
+            <a href="#" target="_blank"
+              ><img src="facebook.svg" alt="Bee Сlever Facebook"
+            /></a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      Array.from(document.querySelectorAll("time")).forEach((element) => {
+        const date = new Date(element.textContent);
+        element.innerHTML = new Intl.DateTimeFormat(
+          document.documentElement.lang,
+          {
+            timeStyle: "short",
+            dateStyle: "long",
+          }
+        ).format(date);
+      });
+    </script>
+  </body>
+</html>

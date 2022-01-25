@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интеллектуальная игра Что? Где? Когда?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <div class="header-logo">
+          <a href="#" class="logo">
+            <img src="beeclever.svg" alt="BeeClever" />
+          </a>
+        </div>
+        <nav class="nav header-nav">
+          <a href="#" class="nav-item">Турниры</a>
+          <a href="#" class="nav-item">О нас</a>
+          <a href="#" class="nav-item nav-active">Как играть</a>
+        </nav>
+        <div class="header-extra">
+          <!--<a href="#" class="button button-light">Войти</a>-->
+          &nbsp;
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="content content-without-asides">
+          <div class="content-main">
+            <h1>Как играть</h1>
+            <h2>Как зарегистрироваться</h2>
+            <p>
+              Капитан или любой игрок команды регистрирует команду на странице
+              турнира, после чего на указанную почту приходят реквизиты.
+            </p>
+
+            <h2>Как вступить в игру</h2>
+            <p>
+              За час до игры на указанную при регистрации почту приходит письмо
+              с номером и паролем для вашей команды. Любой игрок может войти на
+              сайт, введя номер и пароль своей команды. Капитан должен также
+              нажать галочку в поле «я капитан». Ссылка на YouTube трансляцию
+              появляется на сайте за 10 минут до игры.
+            </p>
+
+            <h2>Как отвечать на вопросы</h2>
+            <p>
+              У капитана есть поле «ваш ответ», которое активируется, когда
+              начинается отсчет времени. Ответить можно только один раз за
+              вопрос. Если вы не нажали кнопку «ответить», то ваш ответ будет
+              автоматически принят на 70-й секунде отсчета.
+            </p>
+
+            <h2>Чего не стоит делать</h2>
+            <p>
+              Не стоит перезагружать сайт, если вы еще не ответили на вопрос – у
+              вас собьется таймер.
+            </p>
+
+            <h2>
+              Как подать спорный ответ, сообщить о технической ошибке или
+              связаться с организаторами
+            </h2>
+            <p>
+              Вскоре после письма с номером и паролем на почту также придет
+              письмо со ссылкой на чат с телеграме. Это запасной канал связи с
+              организаторами. Капитану желательно к нему присоединиться.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-contcopy">
+          <div class="footer-contacts">
+            <div>+38 066 430 1279</div>
+            <div>+38 095 826 7155</div>
+            <div><a href="#">edditor@ukr.net</a></div>
+          </div>
+          <div class="footer-copyright">
+            &copy; Bee Сlever. Интеллектуальные игры
+          </div>
+        </div>
+        <div class="footer-social">
+          <div>Мы в в соцсетях</div>
+          <nav>
+            <a href="#" target="_blank"
+              ><img src="telegram.svg" alt="Bee Сlever Telegram"
+            /></a>
+            <a href="#" target="_blank"
+              ><img src="facebook.svg" alt="Bee Сlever Facebook"
+            /></a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      Array.from(document.querySelectorAll("time")).forEach((element) => {
+        const date = new Date(element.textContent);
+        element.innerHTML = new Intl.DateTimeFormat(
+          document.documentElement.lang,
+          {
+            timeStyle: "short",
+            dateStyle: "long",
+          }
+        ).format(date);
+      });
+    </script>
+  </body>
+</html>

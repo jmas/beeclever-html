@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интеллектуальная игра Что? Где? Когда?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <div class="header-logo">
+          <a href="#" class="logo">
+            <img src="beeclever.svg" alt="BeeClever" />
+          </a>
+        </div>
+        <nav class="nav header-nav">
+          <a href="#" class="nav-item">Турниры</a>
+          <a href="#" class="nav-item">О нас</a>
+          <a href="#" class="nav-item">Как играть</a>
+        </nav>
+        <div class="header-extra">
+          <!--<a href="#" class="button button-light">Войти</a>-->
+          &nbsp;
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="content">
+          <div class="content-main">
+            <h1>Весенняя серия Bee Clever. Этап 3</h1>
+            <img src="news-1.jpg" alt="Весенняя серия Bee Clever. Этап 3" />
+            <div class="content-date">
+              Дата проведения: <time>2021-05-25 20:00:00</time>
+            </div>
+            <p>
+              Третья из серии игр, основанных на выборке из нашего авторского
+              проекта - "Украинской лиги". Турнир нетематический. Сложность
+              достаточно невысокая, но таких историй вы больше нигде не
+              услышите. Редакторы - Эдуард Голуб, Виктория Маландина (Киев).
+              Взнос - 9$ с команды. В команде - до 6 человек. Команда может
+              собраться в любом удобном онлайн-чате.
+            </p>
+          </div>
+          <div class="content-side">
+            <div class="card card-prime">
+              <h2>Регистрация в турнире</h2>
+              <form class="rows">
+                <div class="field">
+                  <label class="field-label">Название команды</label>
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="До 40 символов"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label class="field-label">E-mail капитана команды</label>
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="capitan@example.com"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    <span
+                      >Я уже регистрировал(а) команду под таким e-mail на этот
+                      или другой турнир</span
+                    >
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="field-label">Город команды</label>
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="Киев"
+                    required
+                  />
+                </div>
+                <div>
+                  <button type="submit" class="button button-prime">
+                    Зарегистрироваться в данном турнире
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-contcopy">
+          <div class="footer-contacts">
+            <div>+38 066 430 1279</div>
+            <div>+38 095 826 7155</div>
+            <div><a href="#">edditor@ukr.net</a></div>
+          </div>
+          <div class="footer-copyright">
+            &copy; Bee Сlever. Интеллектуальные игры
+          </div>
+        </div>
+        <div class="footer-social">
+          <div>Мы в в соцсетях</div>
+          <nav>
+            <a href="#" target="_blank"
+              ><img src="telegram.svg" alt="Bee Сlever Telegram"
+            /></a>
+            <a href="#" target="_blank"
+              ><img src="facebook.svg" alt="Bee Сlever Facebook"
+            /></a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      Array.from(document.querySelectorAll("time")).forEach((element) => {
+        const date = new Date(element.textContent);
+        element.innerHTML = new Intl.DateTimeFormat(
+          document.documentElement.lang,
+          {
+            timeStyle: "short",
+            dateStyle: "long",
+          }
+        ).format(date);
+      });
+    </script>
+  </body>
+</html>
